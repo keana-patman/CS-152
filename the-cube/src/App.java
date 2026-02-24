@@ -82,13 +82,13 @@ public class App {
         cube[3][4] = cube[3][7];
         cube[3][5] = cube[3][8];
 
-        cube[3][6] = cube[9][3];
-        cube[3][7] = cube[9][4];
-        cube[3][8] = cube[9][5];
+        cube[3][6] = cube[11][5];
+        cube[3][7] = cube[11][4];
+        cube[3][8] = cube[11][3];
 
-        cube[9][3] = temp1;
-        cube[9][4] = temp2;
-        cube[9][5] = temp3;
+        cube[11][5] = temp1;
+        cube[11][4] = temp2;
+        cube[11][3] = temp3;
         //red-face
         String ftempe = cube[0][3];
         cube[0][3] = cube[2][3];
@@ -117,13 +117,13 @@ public class App {
         cube[5][4] = cube[5][1];
         cube[5][5] = cube[5][2];
 
-        cube[5][0] = cube[11][3];
-        cube[5][1] = cube[11][4];
-        cube[5][2] = cube[11][5];
+        cube[5][0] = cube[9][5];
+        cube[5][1] = cube[9][4];
+        cube[5][2] = cube[9][3];
 
-        cube[11][3] = temp1;
-        cube[11][4] = temp2;
-        cube[11][5] = temp3;
+        cube[9][5] = temp1;
+        cube[9][4] = temp2;
+        cube[9][3] = temp3;
         //orange-face
         String ftempe = cube[6][3];
         cube[6][3] = cube[8][3];
@@ -206,9 +206,9 @@ public class App {
         cube[4][2] = cube[6][4];
         cube[3][2] = cube[6][3];
 
-        cube[6][5] = cube[5][6];
+        cube[6][5] = cube[3][6];
         cube[6][4] = cube[4][6];
-        cube[6][3] = cube[3][6];
+        cube[6][3] = cube[5][6];
 
         cube[3][6] = temp1;
         cube[4][6] = temp2;
@@ -246,9 +246,9 @@ public class App {
         cube[8][4] = cube[4][0];
         cube[8][3] = cube[3][0];
 
-        cube[3][0] = temp1;
+        cube[5][0] = temp1;
         cube[4][0] = temp2;
-        cube[5][0] = temp3;
+        cube[3][0] = temp3;
 
         //green-face
         String ftempe = cube[9][3];
@@ -436,7 +436,7 @@ public class App {
         scan.close();
     }
     public static void main(String[] args) throws Exception {
-        final_output_only_mode(cube);
-        //print_every_loop_mode(cube);
+        //final_output_only_mode(cube);
+        print_every_loop_mode(cube);
     }
 }
